@@ -36,7 +36,31 @@
     align-content: center;
 
     .leftContainer {
+      flex: 1;
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 25rem;
+      }
+    }
+
+    .rightContainer {
+      flex: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+
+        color: $white;
+
+        margin: 0 0.5rem;
+      }
     }
   }
 }

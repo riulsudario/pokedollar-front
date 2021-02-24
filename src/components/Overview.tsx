@@ -21,6 +21,7 @@ export function Overview(props: pokemonDetails){
         </div>
 
         <div className={styles.rightContainer}>
+          <span>Estatísticas de habilidade</span>
           {/* TODO add chart with pokemon stats */}
         </div>
       </section>
