@@ -2,16 +2,26 @@ import styles from '../styles/components/Overview.module.scss';
 import { RadarChart } from './RadarChart';
 
 interface pokemonDetails {
+  pokemonId: number,
   pokemonName: string,
   pokemonImage: string,
-  chartDetails: object
+  chartDetails: {
+    max_base_stat: number,
+    step_size: number,
+  },
+  statsDetails: [
+    {
+      name: string,
+      base_stat: number,
+    }
+  ],
 }
 export function Overview(props: pokemonDetails){
   return(
     <div className={styles.overviewContainer}>
       <div className={styles.title}>
         <span className={styles.pokemonName}>{props.pokemonName}</span>
-        <span className={styles.pokemonNumber}>N° 547</span>
+        <span className={styles.pokemonNumber}>N° {props.pokemonId}</span>
       </div>
 
       <section>
@@ -25,6 +35,7 @@ export function Overview(props: pokemonDetails){
           <span>Estatísticas base</span>
           <RadarChart
             chartDetails={props.chartDetails}
+            statsDetails={props.statsDetails}
           />
         </div>
       </section>

@@ -3,12 +3,29 @@ import { Radar } from "react-chartjs-2";
 import styles from '../styles/components/Radar.module.scss';
 
 interface chartDetails {
-  chartDetails: object,
+  chartDetails: {
+    max_base_stat: number,
+    step_size: number,
+  },
+  statsDetails: [
+    {
+      name: string,
+      base_stat: number,
+    }
+  ]
 }
 
 export function RadarChart(props: chartDetails) {
+  const names = [];
+  const baseStats = []
+
+  props.statsDetails.map((stat, i) => {
+    names.push(stat.name);
+    baseStats.push(stat.base_stat)
+  });
+
   const radarData = {
-    labels: ["Ataque", "Ataque especial", "Defesa especial", "Defesa", "Pontos de vida",  "Velocidade"],
+    labels: names,
     datasets: [
       {
         backgroundColor: "rgba(34, 202, 236, .2)",
@@ -17,7 +34,7 @@ export function RadarChart(props: chartDetails) {
         poingBorderColor: "#fff",
         pointHoverBackgroundColor: "#fff",
         pointHoverBorderColor: "rgba(34, 202, 236, 1)",
-        data: [55, 40, 79, 99, 40, 47]
+        data: baseStats
       }
     ]
   };
@@ -26,8 +43,8 @@ export function RadarChart(props: chartDetails) {
     scale: {
       ticks: {
         min: 0,
-        max: 99,
-        stepSize: 20,
+        max: props.chartDetails.max_base_stat,
+        stepSize: props.chartDetails.step_size,
         showLabelBackdrop: false,
         backdropColor: "rgba(203, 197, 11, 1)",
         responsive: true
