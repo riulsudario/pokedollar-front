@@ -1,0 +1,42 @@
+@import "../variables.scss";
+
+.overviewContainer {
+  margin: 1rem 0 0 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+
+      color: $white;
+
+      margin: 0 0.5rem;
+    }
+
+    .pokemonName {
+      font-weight: 500;
+    }
+
+    .pokemonNumber {
+      font-weight: 400;
+      opacity: 0.8;
+    }
+  }
+
+  section {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 6.25rem;
+    align-content: center;
+
+    .leftContainer {
+
+    }
+  }
+}
