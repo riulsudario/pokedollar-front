@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Radar } from "react-chartjs-2";
 import styles from '../styles/components/Radar.module.scss';
 

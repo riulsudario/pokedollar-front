@@ -28,33 +28,30 @@ interface pokemonDetails {
   }
 }
 
-
-const pokemon = {
-  id: null,
-  name: null,
-  photo: null,
-  abilities: [
-    {
-      name: null,
-      url: null,
-      hidden: null,
-      slot: null,
-    }
-  ],
-  chart: {
-    stats: [
-      {
-        name: null,
-        base_stat: null,
-      }
-    ],
-    max_base_stat: null,
-    step_size: null
-  }
-}
-
 export default function Home() {
-  const [pokemonDetails, setPokemonDetails] = useState<pokemonDetails>(pokemon);
+  const [pokemonDetails, setPokemonDetails] = useState<pokemonDetails>({
+                                                                        id: null,
+                                                                        name: null,
+                                                                        photo: null,
+                                                                        abilities: [
+                                                                          {
+                                                                            name: null,
+                                                                            url: null,
+                                                                            hidden: null,
+                                                                            slot: null,
+                                                                          }
+                                                                        ],
+                                                                        chart: {
+                                                                          stats: [
+                                                                            {
+                                                                              name: null,
+                                                                              base_stat: null,
+                                                                            }
+                                                                          ],
+                                                                          max_base_stat: null,
+                                                                          step_size: null
+                                                                        }
+                                                                      });
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     api.get('/api/v1/currency')
