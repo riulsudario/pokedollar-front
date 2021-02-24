@@ -1,10 +1,11 @@
 import styles from '../styles/components/Overview.module.scss';
+import { RadarChart } from './RadarChart';
 
 interface pokemonDetails {
   pokemonName: string,
   pokemonImage: string,
+  chartDetails: object
 }
-
 export function Overview(props: pokemonDetails){
   return(
     <div className={styles.overviewContainer}>
@@ -21,8 +22,10 @@ export function Overview(props: pokemonDetails){
         </div>
 
         <div className={styles.rightContainer}>
-          <span>Estatísticas de habilidade</span>
-          {/* TODO add chart with pokemon stats */}
+          <span>Estatísticas base</span>
+          <RadarChart
+            chartDetails={props.chartDetails}
+          />
         </div>
       </section>
     </div>

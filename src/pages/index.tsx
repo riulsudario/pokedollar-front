@@ -7,15 +7,20 @@ export default function Home() {
   const [pokemonDetails, setPokemonDetails] = useState<any | {}>({})
 
   useEffect(() => {
-    api.get('/api/v1/currency').then(response => { setPokemonDetails(response.data) })
+    async function getData(){
+      await api.get('/api/v1/currency').then(response => { setPokemonDetails(response.data) })
+    }
+
+    getData();
   }, []);
 
   return (
     <div>
       <Navbar />
       <Overview
-        pokemonName={pokemonDetails.name}
-        pokemonImage={pokemonDetails.photo}
+        pokemonName  = {pokemonDetails.name}
+        pokemonImage = {pokemonDetails.photo}
+        chartDetails = {pokemonDetails.chart}
       />
     </div>
   )
