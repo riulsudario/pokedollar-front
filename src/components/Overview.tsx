@@ -1,4 +1,5 @@
 import styles from '../styles/components/Overview.module.scss';
+import Head from 'next/head';
 import { RadarChart } from './RadarChart';
 
 interface pokemonDetails {
@@ -19,6 +20,15 @@ interface pokemonDetails {
 export function Overview(props: pokemonDetails){
   return(
     <div className={styles.overviewContainer}>
+      <Head>
+        <title>Pokedollar | R$5,47</title>
+        <meta property="og:image" content={props.pokemonImage} />
+        <meta property="og:url"           content="https:/pokedollar.herokuapp.com/" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="Pokedollar | R$5,47" />
+        <meta property="og:description"   content="O valor do dolar está em 5,49." />
+      </Head>
+
       <div className={styles.title}>
         <span className={styles.pokemonName}>{props.pokemonName}</span>
         <span className={styles.pokemonNumber}>N° {props.pokemonId}</span>
@@ -27,7 +37,7 @@ export function Overview(props: pokemonDetails){
       <section>
         <div className={styles.leftContainer}>
           <div className={styles.imageContainer}>
-            <img src={props.pokemonImage} alt=""/>
+            <img src={props.pokemonImage} alt={props.pokemonName} draggable="false"/>
           </div>
         </div>
 

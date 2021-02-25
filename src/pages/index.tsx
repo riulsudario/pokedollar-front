@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Loading } from '../components/Loading';
 import { Navbar } from '../components/Navbar';
 import { Overview } from '../components/Overview';
+import { ShareButton } from '../components/ShareButton';
 import api from './api/api';
 
 interface pokemonDetails {
@@ -66,13 +67,16 @@ export default function Home() {
         (
           <Loading />
         ) : (
-          <Overview
-            pokemonId    = {pokemonDetails.id}
-            pokemonName  = {pokemonDetails.name}
-            pokemonImage = {pokemonDetails.photo}
-            chartDetails = {pokemonDetails.chart}
-            statsDetails = {pokemonDetails.chart.stats}
-          />
+          <div>
+            <Overview
+              pokemonId    = {pokemonDetails.id}
+              pokemonName  = {pokemonDetails.name}
+              pokemonImage = {pokemonDetails.photo}
+              chartDetails = {pokemonDetails.chart}
+              statsDetails = {pokemonDetails.chart.stats}
+            />
+            <ShareButton />
+          </div>
         )}
     </div>
   )

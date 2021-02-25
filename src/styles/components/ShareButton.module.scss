@@ -1,0 +1,73 @@
+@import '../variables.scss';
+
+.shareButtonContainer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+
+  button {
+    width: 4rem;
+    height: 4rem;
+
+    background: $yellow;
+    border: 0;
+    border-radius: 50%;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      fill: $background;
+    }
+  }
+
+  button:hover~ul {
+    display: block;
+  }
+
+  ul {
+    display: none;
+    list-style-type: none;
+
+    li {
+      a {
+        margin: 0.4rem 0;
+        width: 3rem;
+        height: 3rem;
+
+        background: $yellow;
+        border: 0;
+        border-radius: 50%;
+        outline: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        -webkit-transition: transform  .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+
+          fill: $background;
+        }
+      }
+    }
+  }
+
+  ul:hover {
+    display: block;
+  }
+}
