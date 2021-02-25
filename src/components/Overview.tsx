@@ -25,7 +25,7 @@ export function Overview(props: pokemonDetails){
   return(
     <div className={styles.overviewContainer}>
       <Head>
-        <title>Pokedollar | R$5,47</title>
+        <title>Pokedollar | Veja o valor do dólar em Pokémon!</title>
         <meta property="og:image" content={props.pokemonImage} />
         <meta property="og:url"           content={url} />
         <meta property="og:type"          content="website" />
@@ -36,6 +36,9 @@ export function Overview(props: pokemonDetails){
         <meta name="twitter:description"  content={description} />
         <meta name="twitter:image"        content={props.pokemonImage} />
         <meta name="twitter:card"         content="summary_large_image"/>
+
+        <meta name="description" content={title} />
+        <meta name="robots" content="all" />
       </Head>
 
       <div className={styles.title}>
