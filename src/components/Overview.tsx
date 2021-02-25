@@ -25,7 +25,6 @@ export function Overview(props: pokemonDetails){
   return(
     <div className={styles.overviewContainer}>
       <Head>
-        <title>Pokedollar | Veja o valor do dólar em Pokémon!</title>
         <meta property="og:image" content={props.pokemonImage} />
         <meta property="og:url"           content={url} />
         <meta property="og:type"          content="website" />
@@ -42,8 +41,8 @@ export function Overview(props: pokemonDetails){
       </Head>
 
       <div className={styles.title}>
-        <span className={styles.pokemonName}>{props.pokemonName}</span>
-        <span className={styles.pokemonNumber}>N° {props.pokemonId}</span>
+        <h1 className={styles.pokemonName}>{props.pokemonName}</h1>
+        <h1 className={styles.pokemonNumber}>N° {props.pokemonId}</h1>
       </div>
 
       <section>

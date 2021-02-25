@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 import { Loading } from '../components/Loading';
 import { Navbar } from '../components/Navbar';
@@ -61,6 +62,10 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Pokedollar | Veja o valor do dólar em Pokémon!</title>
+      </Head>
+
       <Navbar />
       {
         isLoading ?
