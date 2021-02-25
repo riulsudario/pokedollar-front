@@ -89,6 +89,8 @@ export default function Home() {
 
         <meta name="description" content={title} />
         <meta name="robots" content="all" />
+
+        <meta name="google-site-verification" content="BUruOVD1LqZ0Boc5kNBUFBm7pvtITYVfDUng3ZyXqDI" />
       </Head>
 
       <Navbar />
