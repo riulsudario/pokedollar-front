@@ -25,7 +25,7 @@ export function Overview(props: pokemonDetails){
   return(
     <div className={styles.overviewContainer}>
       <Head>
-        <meta property="og:image" content={props.pokemonImage} />
+        <meta property="og:image" content="http://pokedollar.herokuapp.com/pokedollar.png" />
         <meta property="og:url"           content={url} />
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content={title} />
@@ -33,7 +33,7 @@ export function Overview(props: pokemonDetails){
 
         <meta name="twitter:title"        content={title} />
         <meta name="twitter:description"  content={description} />
-        <meta name="twitter:image"        content={props.pokemonImage} />
+        <meta name="twitter:image"        content="http://pokedollar.herokuapp.com/pokedollar.png" />
         <meta name="twitter:card"         content="summary_large_image"/>
 
         <meta name="description" content={title} />
