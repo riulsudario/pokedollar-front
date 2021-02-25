@@ -18,27 +18,13 @@ interface pokemonDetails {
   ],
 }
 export function Overview(props: pokemonDetails){
-  const url         = 'http:/pokedollar.herokuapp.com/';
-  const title       = 'Pokedollar, veja o valor do dólar representado por um Pokémon!';
   const description = 'O valor do dólar está equivalente a um ' + props.pokemonName + '!';
 
   return(
     <div className={styles.overviewContainer}>
       <Head>
-        <meta property="og:url"           content={url} />
-        <meta property="og:type"          content="website" />
-        <meta property="og:title"         content={title} />
         <meta property="og:description"   content={description} />
-        <meta property="og:locale"        content="pt_BR" />
-        <meta property="og:site_name"     content="Pokédollar"></meta>
-
-        <meta name="twitter:title"        content={title} />
         <meta name="twitter:description"  content={description} />
-        <meta name="twitter:image"        content="http://pokedollar.herokuapp.com/pokedollar.png" />
-        <meta name="twitter:card"         content="summary_large_image"/>
-
-        <meta name="description" content={title} />
-        <meta name="robots" content="all" />
       </Head>
 
       <div className={styles.title}>

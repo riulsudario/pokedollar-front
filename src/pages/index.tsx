@@ -60,6 +60,10 @@ export default function Home() {
        .then(response => { setPokemonDetails(response.data), setIsLoading(false) })
   }, []);
 
+  const url         = 'http:/pokedollar.herokuapp.com/';
+  const title       = 'Pokedollar, veja o valor do dólar representado por um Pokémon!';
+
+
   return (
     <div>
       <Head>
@@ -70,6 +74,19 @@ export default function Home() {
         <meta property="og:image:width"   content="1920" />
         <meta property="og:image:height"  content="1080" />
         <meta property="og:image:alt"     content="Pokedollar" />
+
+        <meta property="og:url"           content={url} />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content={title} />
+        <meta property="og:locale"        content="pt_BR" />
+        <meta property="og:site_name"     content="Pokédollar"></meta>
+
+        <meta name="twitter:title"        content={title} />
+        <meta name="twitter:image"        content="http://pokedollar.herokuapp.com/pokedollar.png" />
+        <meta name="twitter:card"         content="summary_large_image"/>
+
+        <meta name="description" content={title} />
+        <meta name="robots" content="all" />
       </Head>
 
       <Navbar />
