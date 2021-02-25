@@ -64,6 +64,12 @@ export default function Home() {
     <div>
       <Head>
         <title>Pokedollar | Veja o valor do dólar em Pokémon!</title>
+
+        <meta property="og:image"         content="http://pokedollar.herokuapp.com/pokedollar.png" />
+        <meta property="og:image:type"    content="image/png" />
+        <meta property="og:image:width"   content="1920" />
+        <meta property="og:image:height"  content="1080" />
+        <meta property="og:image:alt"     content="Pokedollar" />
       </Head>
 
       <Navbar />

@@ -25,12 +25,6 @@ export function Overview(props: pokemonDetails){
   return(
     <div className={styles.overviewContainer}>
       <Head>
-        <meta property="og:image"         content="http://pokedollar.herokuapp.com/pokedollar.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1920" />
-        <meta property="og:image:height" content="1080" />
-        <meta property="og:image:alt" content="Pokedollar" />
-
         <meta property="og:url"           content={url} />
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content={title} />
