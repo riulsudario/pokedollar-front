@@ -22,11 +22,6 @@ export function Overview(props: pokemonDetails){
 
   return(
     <div className={styles.overviewContainer}>
-      <Head>
-        <meta property="og:description"   content={description} />
-        <meta name="twitter:description"  content={description} />
-      </Head>
-
       <div className={styles.title}>
         <h1 className={styles.pokemonName}>{props.pokemonName}</h1>
         <h1 className={styles.pokemonNumber}>N° {props.pokemonId}</h1>
