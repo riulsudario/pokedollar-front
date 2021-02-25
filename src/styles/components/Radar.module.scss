@@ -1,9 +1,39 @@
 @import "../variables.scss";
 
 
-.radarContainer {
-  canvas {
-    width: 600px !important;
-    height: 300px !important;
+
+@media (min-width: 992.98px) {
+  .radarContainer {
+    canvas {
+      width: 600px !important;
+      height: 300px !important;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .radarContainer {
+    canvas {
+      width: 600px !important;
+      height: 300px !important;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .radarContainer {
+    canvas {
+      width: 700px !important;
+      height: 350px !important;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .radarContainer {
+    canvas {
+      width: 360px !important;
+      height: 180px !important;
+    }
   }
 }
