@@ -1,2 +1,3 @@
 user-agent: *
 Disallow:
+Sitemap: https://pokedollar.herokuapp.com/sitemap.xml
