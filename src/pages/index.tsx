@@ -60,7 +60,7 @@ export default function Home() {
        .then(response => { setPokemonDetails(response.data), setIsLoading(false) })
   }, []);
 
-  const url         = 'https:/pokedollar.herokuapp.com';
+  const url         = 'https://pokedollar.herokuapp.com';
   const title       = 'Pokédollar, veja o valor do dólar representado por um Pokémon!';
   const description = 'Qual Pokémon vale um dólar convertido em real?';
 
