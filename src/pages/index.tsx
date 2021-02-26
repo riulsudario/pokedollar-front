@@ -87,7 +87,7 @@ export default function Home() {
         <meta name="twitter:image"        content="http://pokedollar.herokuapp.com/pokedollar.png" />
         <meta name="twitter:card"         content="summary_large_image"/>
 
-        <meta name="description" content={title} />
+        <meta name="description" content="Acompanhe em tempo real o valor do dólar representado por um Pokémon! Divirta-se com as possibilidades e conheça novos Pokémon." />
         <meta name="robots" content="all" />
 
         <meta name="google-site-verification" content="BUruOVD1LqZ0Boc5kNBUFBm7pvtITYVfDUng3ZyXqDI" />
