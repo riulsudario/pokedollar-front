@@ -21,8 +21,10 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "next-sitemap.js", "next.config.js"  ],
+    "**/*.tsx",
+    "next-sitemap.js",
+    "next.config.js"
+  ],
   "exclude": [
     "node_modules"
   ]
