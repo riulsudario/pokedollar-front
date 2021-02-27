@@ -10,6 +10,7 @@ export default function Home() {
     <div>
       <Head>
         <title>{meta.index.title}</title>
+        <link rel="canonical" href="https://pokedollar.herokuapp.com" />
         <meta name="description" content={meta.index.description} />
         <meta name="google-site-verification" content={meta.index.google_verification} />
         <meta name="robots" />

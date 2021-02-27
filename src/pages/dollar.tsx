@@ -66,6 +66,7 @@ export default function Dollar() {
     <div>
       <Head>
         <title>{meta.dollar.title}</title>
+        <link rel="canonical" href="https://pokedollar.herokuapp.com/dollar" />
         <meta name="description" content={meta.dollar.description} />
         <meta name="google-site-verification" content={meta.dollar.google_verification} />
         <meta name="robots" />
