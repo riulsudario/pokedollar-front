@@ -4,7 +4,7 @@ export default class MyDocument extends Document {
   render () {
     const schema = {
       "@context": "http://schema.org",
-      "@type": "WebSite",
+      "@type": "WebPage",
       "url": "https://pokedollar.herokuapp.com/",
       "potentialAction": {
         "@type": "ViewAction",
