@@ -1,0 +1,93 @@
+@import '../variables.scss';
+
+
+.dollarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .currencyContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .dollar {
+      background: $yellow;
+      width: 15rem;
+      height: 3rem;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $background;
+        margin: 0 0.2rem;
+      }
+    }
+
+    svg {
+      z-index: -1;
+      width: 2rem;
+      height: 1.5rem;
+      opacity: 0.8;
+    }
+
+    .real {
+      background: $yellow;
+      width: 15rem;
+      height: 3rem;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $background;
+        margin: 0 0.2rem;
+      }
+    }
+  }
+
+  .up {
+    margin: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $red;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .down {
+    margin: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $green;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dollar {
+    width: 10rem !important;
+    height: 3rem;
+  }
+  .real {
+    width: 10rem !important;
+    height: 3rem;
+  }
+}

@@ -1,6 +1,7 @@
 import styles from '../styles/components/Overview.module.scss';
-import Head from 'next/head';
+import { Currency } from './Currency';
 import { RadarChart } from './RadarChart';
+import { Scroll } from './Scroll';
 
 interface pokemonDetails {
   pokemonId: number,
@@ -16,12 +17,18 @@ interface pokemonDetails {
       base_stat: number,
     }
   ],
+  dollar: {
+    value: number,
+    percentage_change: number,
+    positive: boolean
+  }
 }
 export function Overview(props: pokemonDetails){
-  const description = 'O valor do dólar está equivalente a um ' + props.pokemonName + '!';
-
   return(
     <div className={styles.overviewContainer}>
+      <Currency
+        dollar={props.dollar}
+      />
       <div className={styles.title}>
         <h1 className={styles.pokemonName}>{props.pokemonName}</h1>
         <h1 className={styles.pokemonNumber}>N° {props.pokemonId}</h1>
@@ -42,6 +49,7 @@ export function Overview(props: pokemonDetails){
           />
         </div>
       </section>
+      <Scroll />
     </div>
   );
 }

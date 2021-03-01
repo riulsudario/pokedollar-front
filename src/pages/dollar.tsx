@@ -7,6 +7,7 @@ import { ShareButton } from '../components/ShareButton';
 
 import api from './api/api';
 import meta from '../data/meta';
+import { HomeContainer } from '../components/HomeContainer';
 
 interface pokemonDetails {
   id: number,
@@ -29,6 +30,11 @@ interface pokemonDetails {
     ],
     max_base_stat: number,
     step_size: number
+  },
+  dollar: {
+    value: number,
+    percentage_change: number,
+    positive: boolean
   }
 }
 
@@ -54,6 +60,11 @@ export default function Dollar() {
                                                                           ],
                                                                           max_base_stat: null,
                                                                           step_size: null
+                                                                        },
+                                                                        dollar: {
+                                                                          value: null,
+                                                                          percentage_change: null,
+                                                                          positive: null
                                                                         }
                                                                       });
   const [isLoading, setIsLoading] = useState(true);
@@ -105,6 +116,7 @@ export default function Dollar() {
               pokemonImage = {pokemonDetails.photo}
               chartDetails = {pokemonDetails.chart}
               statsDetails = {pokemonDetails.chart.stats}
+              dollar       = {pokemonDetails.dollar}
             />
             <ShareButton />
           </div>
