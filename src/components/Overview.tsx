@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import styles from '../styles/components/Overview.module.scss';
 import { Currency } from './Currency';
 import { RadarChart } from './RadarChart';
-import { Scroll } from './Scroll';
 
 interface pokemonDetails {
   pokemonId: number,
@@ -30,7 +30,14 @@ export function Overview(props: pokemonDetails){
         dollar={props.dollar}
       />
       <div className={styles.title}>
-        <h1 className={styles.pokemonName}>{props.pokemonName}</h1>
+        <Link href={`https://www.pokemon.com/br/pokedex/${props.pokemonId}`}>
+          <h1
+            className={styles.pokemonName}
+            title="Mais informações sobre o Pokémon"
+          >
+            {props.pokemonName}
+          </h1>
+        </Link>
         <h1 className={styles.pokemonNumber}>N° {props.pokemonId}</h1>
       </div>
 
@@ -49,7 +56,6 @@ export function Overview(props: pokemonDetails){
           />
         </div>
       </section>
-      <Scroll />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { ShareButton } from '../components/ShareButton';
 
 import api from './api/api';
 import meta from '../data/meta';
-import { HomeContainer } from '../components/HomeContainer';
+import { Footer } from '../components/Footer';
 
 interface pokemonDetails {
   id: number,
@@ -104,10 +104,14 @@ export default function Dollar() {
       </Head>
 
       <Navbar />
+      <ShareButton />
       {
         isLoading ?
         (
+          <>
           <Loading />
+          <Footer />
+          </>
         ) : (
           <div>
             <Overview
@@ -118,7 +122,7 @@ export default function Dollar() {
               statsDetails = {pokemonDetails.chart.stats}
               dollar       = {pokemonDetails.dollar}
             />
-            <ShareButton />
+            <Footer />
           </div>
         )}
     </div>

@@ -11,11 +11,11 @@ export function ShareButton(){
       </button>
       <ul>
         <li>
-          <a href='https://www.facebook.com/sharer/sharer.php?u=https://pokedollar.herokuapp.com/'>
+          <a href='https://www.facebook.com/sharer/sharer.php?u=https://pokedollar.herokuapp.com/' target="_blank">
             <ImFacebook />
           </a>
 
-          <a href={encodeURI("https://wa.me/?text=Pokédollar: Veja o valor do dólar como um Pokémon: https://pokedollar.herokuapp.com/")} data-action="share/whatsapp/share">
+          <a href={encodeURI("https://wa.me/?text=Pokédollar: Veja o valor do dólar como um Pokémon: https://pokedollar.herokuapp.com/")} data-action="share/whatsapp/share" target="_blank">
             <ImWhatsapp />
           </a>
 

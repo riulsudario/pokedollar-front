@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+.footerContainer {
+  width: 100%;
+  color: $white;
+
+  padding: 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 1px solid $yellow;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    svg {
+      fill: $yellow;
+      margin: 0 0.5rem;
+    }
+    a {
+      text-decoration: underline;
+      color: $yellow;
+      margin: 0 0 0 0.5rem;
+    }
+  }
+}

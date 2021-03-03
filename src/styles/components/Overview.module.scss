@@ -21,7 +21,12 @@
       }
 
       .pokemonName {
+        cursor: pointer;
         font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .pokemonNumber {
@@ -88,7 +93,11 @@
       }
 
       .pokemonName {
+        cursor: pointer;
         font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .pokemonNumber {
@@ -156,7 +165,11 @@
       }
 
       .pokemonName {
+        cursor: pointer;
         font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .pokemonNumber {
@@ -213,6 +226,10 @@
     flex-direction: column;
     align-items: center;
 
+    a {
+      cursor: pointer;
+    }
+
     .title {
       display: flex;
       h1 {
@@ -225,7 +242,11 @@
       }
 
       .pokemonName {
+        cursor: pointer;
         font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .pokemonNumber {

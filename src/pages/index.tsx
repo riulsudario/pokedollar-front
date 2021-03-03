@@ -4,6 +4,7 @@ import { ShareButton } from "../components/ShareButton";
 import Head from "next/head";
 
 import meta from '../data/meta';
+import { Footer } from "../components/Footer";
 
 export default function Home() {
   return(
@@ -39,6 +40,7 @@ export default function Home() {
       <Navbar />
       <HomeContainer />
       <ShareButton />
+      <Footer />
     </div>
   );
 }
